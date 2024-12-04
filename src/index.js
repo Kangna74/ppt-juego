@@ -5,21 +5,23 @@ let seleccion2 = false;
 
 function opcionEscogida(quien, respuesta, identificador) {
   alert(`El jugador ${quien} escogio ${respuesta}`);
-  if (quien === "1") {
+  if (quien === 1) {
     jugador1 = respuesta;
     seleccion1 = true;
   } else {
     jugador2 = respuesta;
     seleccion2 = true;
   }
+  bloquearOpciones(quien, respuesta);
   if (seleccion1 && seleccion2) {
     determinarGanador(jugador1, jugador2);
   }
 }
 function bloquearOpciones(numJugador, opcionElegida) {
-  const jugador = document.getElementById(numJugador);
-  jugador;
-  const laOpcionPulsada = document.getElementById(identificador);
+  const Jugador = document.getElementById(numJugador);
+  const Botones = Jugador.querySelectorAll("button");
+  Botones.forEach(boton => { boton.disabled = true; });
+  const laOpcionPulsada = document.getElementById(opcionElegida + numJugador);
   laOpcionPulsada.classList.add("selected");
 }
 
@@ -33,4 +35,25 @@ function determinarGanador(opcion1, opcion2) {
   } else {
     alert("Jugador 2 gana");
   }
+  MostrarReinciar();
+}
+
+function colorearGanador() {
+
+}
+
+function reiniciarJuego() {
+  const Botones = document.querySelectorAll("button");
+  Botones.forEach(boton => { boton.disabled = false; });
+  jugador1 = null;
+  jugador2 = null;
+  seleccion1 = false;
+  seleccion2 = false;
+  const laOpcionPulsada = document.getElementsByClassName("selected");
+  laOpcionPulsada.classList.remove("selected");
+}
+function MostrarReinciar() {
+  const nuestraWeb = document.body;
+
+  nuestraWeb.innerHTML += "<button onClick=\"reiniciarJuego()\"> Reiniciar </button>";
 }

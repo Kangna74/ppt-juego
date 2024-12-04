@@ -1,17 +1,89 @@
 <!DOCTYPE html>
+
 <html lang="es">
 
+
+
 <head>
+
   <meta charset="UTF-8">
+
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+
+  <title>Juego - Piedra, Papel o Tijera</title>
+
   <link rel="stylesheet" href="./index.css">
-  <script type="module" src="./index.js"></script>
+  <script src="./index.js"></script>
+
+
 </head>
+
+
 
 <body>
 
+  <div class="jugador" id="1">
+
+    <h1>Jugador 1</h1>
+
+    <div class="opciones">
+
+      <button onClick="opcionEscogida(1,'piedra')" class="" id="piedra1">
+
+        <img src="/img/piedra.png" alt="Imagen Piedra">
+
+      </button>
+
+      <button onClick="opcionEscogida(1, 'papel')" class="" id="papel1">
+
+        <img src="/img/papel.png" alt="Imagen Papel">
+
+      </button>
+
+      <button onClick="opcionEscogida(1, 'tijera')" class="" id="tijera1">
+
+        <img src="/img/tijera.png" alt="Imagen Tijera">
+
+      </button>
+
+    </div>
+
+
+
+  </div>
+
+  <div class="jugador" id="2">
+
+    <h1>Jugador 2</h1>
+
+    <div class="opciones">
+
+      <button onClick="opcionEscogida(2, 'piedra')" class="" id="piedra2">
+
+        <img src="/img/piedra.png" alt="Imagen Piedra">
+
+      </button>
+
+      <button onClick="opcionEscogida(2, 'papel')" class="" id="papel2">
+
+        <img src="/img/papel.png" alt="Imagen Papel">
+
+      </button>
+
+      <button onClick="opcionEscogida(2, 'tijera')" class="" id="tijera2">
+
+        <img src="/img/tijera.png" alt="Imagen Tijera">
+
+      </button>
+
+    </div>
+
+  </div>
+
 </body>
+
+
 
 </html>

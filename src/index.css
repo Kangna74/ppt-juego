@@ -1,3 +1,74 @@
+:root{
+  --bg-color: #f0f0f0;
+  --text-color: #000;
+  --button-bg: #d1cece;
+  --button-selected: #d31f1f;
+  --button-hover: #e0e0e0;
+  --button-disabled: #c0c0c0;
+
+}
+
 body {
-  background: #171717;
+  background-color: var(--bg-color);
+  font-family: Roboto, sans-serif;
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+
+}
+
+.jugador{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+
+  .opciones{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    width: 100%;
+
+    img{
+      width: 100px;
+      height: 100px;
+
+    }
+
+    button{
+      background-color: var(--button-bg);
+      cursor: pointer;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      transition: all 0.3s ease;
+
+    }
+
+    button:hover{
+      background-color: var(--button-hover);
+
+    }
+
+    button:disabled {
+      cursor: not-allowed;
+      background-color: var(--button-disabled);
+
+      &.selected{
+        background-color: var(--button-selected);
+        border: 2px solid black;
+
+      }
+
+    }
+
+  }
+
 }
