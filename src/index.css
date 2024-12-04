@@ -2,9 +2,10 @@
   --bg-color: #f0f0f0;
   --text-color: #000;
   --button-bg: #d1cece;
-  --button-selected: #d31f1f;
+  --button-selected: #ee5151;
   --button-hover: #e0e0e0;
   --button-disabled: #c0c0c0;
+  --bg-ganador: #73d866;
 
 }
 
@@ -71,4 +72,8 @@ body {
 
   }
 
+}
+
+.ganador{
+  background-color: var(--bg-ganador);
 }
